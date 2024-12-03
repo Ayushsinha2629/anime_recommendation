@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'anime_db',
         'USER': 'ayush',
         'PASSWORD': 'mysecretpassword',
-        'HOST': 'localhost',
+        'HOST': 'postgres_anime',
         'PORT': '5432',
     }
 }
