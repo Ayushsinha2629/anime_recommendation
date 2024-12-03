@@ -52,22 +52,36 @@ The backend leverages Django REST Framework, PostgreSQL, and the AniList GraphQL
    git clone https://github.com/Ayushsinha2629/anime_recommendation.git
    cd anime_recommendation
    ```
-2. Docker Setup
-    ```bash
-    docker-compose up --build
-    ```
-3. Create a virtual environment and activate it:
+2. Create a virtual environment and activate it:
     ```bash
     python3 -m venv .venv
     source .venv/bin/activate
     ```
-4. Apply migrations:
+3. Docker Setup
     ```bash
-    python manage.py makemigrations
-    python manage.py migrate
-    ```
-5. Run the development server:
-    ```bash
-    python manage.py runserver
+    docker-compose up --build
     ```
 
+## Available Endpoints
+
+### Authentication
+
+| Endpoint         | Method | Description                  |
+|------------------|--------|------------------------------|
+| `/auth/register` | POST   | Register a new user          |
+| `/auth/login`    | POST   | Login and get JWT token      |
+
+### Anime
+
+| Endpoint                 | Method | Description                           |
+|--------------------------|--------|---------------------------------------|
+| `/anime/search`           | GET    | Search anime by name/genre           |
+| `/anime/recommendations`  | GET    | Get personalized recommendations     |
+
+### User Preferences
+
+| Endpoint                | Method | Description                       |
+|-------------------------|--------|-----------------------------------|
+| `/user/preferences`     | POST   | Add or update preferences         |
+
+---
