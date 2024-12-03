@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   postgres:
-    image: postgres:14
+    image: postgres
     container_name: postgres_anime
     restart: always
     environment:
@@ -10,9 +10,19 @@ services:
       POSTGRES_PASSWORD: mysecretpassword
       POSTGRES_DB: anime_db
     ports:
-      - "5432:5433"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-
+   # Django Web Application
+  web:
+    build: .
+    container_name: anime_recommendation_web
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres
 volumes:
   postgres_data:
