@@ -1,0 +1,84 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment settings
+.env
+*.env
+
+# Django secret keys
+*.pem
+*.key
+
+# Virtual environment directory
+.venv/
+env/
+venv/
+
+# Database files
+*.sqlite3
+db.sqlite3
+
+# Media and static files
+/media/
+staticfiles/
+
+# Logs and debugging
+*.log
+*.pot
+*.pyc
+*.coverage
+*.cover
+.hypothesis/
+htmlcov/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor specific files
+.vscode/
+.idea/
+*.swp
+
+# Temporary files and directories
+*.tmp
+*.bak
+*.backup
+*.orig
+*.rej
+*.swo
+*.swp
+
+# Celery, Redis, and task queues
+celerybeat-schedule
+*.pid
+
+# Test coverage
+.coverage
+.coverage.*
+
+# Build artifacts
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Node.js files (if using npm for frontend dependencies)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Docker and container-related
+*.dockerfile
+*.env.docker
+*.dockerignore
+docker-compose.override.yml
+*.sock
+
+# Migrations (optional, if you regenerate them often)
+*/migrations/*.py
+!*/migrations/__init__.py
